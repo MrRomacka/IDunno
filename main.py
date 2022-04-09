@@ -14,9 +14,9 @@ app = Flask(__name__)
 @app.route('/try')
 def FL():
     f = open('txt.txt', 'w')
-    f.write(request.args)
-    print(request.args)
-    return request.args
+    f.write(json.dumps(request.form.to_dict()))
+    print(json.dumps(request.form.to_dict()))
+    return json.dumps(request.form.to_dict())
     return flask.Request.json_module.get_json()
 
 if __name__ == '__main__':
