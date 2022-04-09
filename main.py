@@ -13,7 +13,9 @@ app = Flask(__name__)
 
 @app.route('/try')
 def FL():
-    return request
+    return decodeb64(request.get_data())
+    print(flask.Request.args.get())
+    return flask.Request.json_module.get_json()
 
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
