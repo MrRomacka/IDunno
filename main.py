@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
 import requests
 import json
 import sqlite3
@@ -13,11 +13,11 @@ app = Flask(__name__)
 
 @app.route('/try')
 def FL():
-    req = requests.post()
-    print(req.json())
-    req = decodeb64(req)
-    print(req.json())
-    print(req)
+    try:
+        req1 = request.args.get()
+        print(req1)
+    except:
+        print('Hi')
 
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
