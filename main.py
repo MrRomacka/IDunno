@@ -11,9 +11,10 @@ def decodeb64(coded_st):
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/try')
 def FL():
-    req = requests.get()
+    req = ''
+    input(req)
     req = decodeb64(req)
     print(req)
 
