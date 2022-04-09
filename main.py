@@ -13,8 +13,8 @@ app = Flask(__name__)
 
 @app.route('/try')
 def FL():
+    print(request.args)
     return request.args
-    print(flask.Request.args.get())
     return flask.Request.json_module.get_json()
 
 if __name__ == '__main__':
