@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 @app.route('/try')
 def FL():
-    return decodeb64(request.get_data())
+    return request.args
     print(flask.Request.args.get())
     return flask.Request.json_module.get_json()
 
