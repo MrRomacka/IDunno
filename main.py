@@ -13,6 +13,8 @@ app = Flask(__name__)
 
 @app.route('/try')
 def FL():
+    f = open('txt.txt', 'w')
+    f.write(request.args)
     print(request.args)
     return request.args
     return flask.Request.json_module.get_json()
