@@ -15,9 +15,9 @@ app = Flask(__name__)
 def FL():
     try:
         req = flask.Request.get_data()
-        print(req)
+        return req
     except:
-        print('Hi')
+        return 'Hi'
 
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
