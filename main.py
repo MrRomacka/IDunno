@@ -13,8 +13,10 @@ app = Flask(__name__)
 
 @app.route('/try')
 def FL():
-    req = requests.get()
+    req = requests.post()
+    print(req.json())
     req = decodeb64(req)
+    print(req.json())
     print(req)
 
 if __name__ == '__main__':
