@@ -13,8 +13,7 @@ app = Flask(__name__)
 
 @app.route('/try')
 def FL():
-    req = ''
-    input(req)
+    req = requests.get()
     req = decodeb64(req)
     print(req)
 
