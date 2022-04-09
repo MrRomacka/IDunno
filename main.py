@@ -11,7 +11,7 @@ def decodeb64(coded_st):
 
 app = Flask(__name__)
 
-@app.route('/'):
+@app.route('/')
 def FL():
     req = requests.get()
     req = decodeb64(req)
